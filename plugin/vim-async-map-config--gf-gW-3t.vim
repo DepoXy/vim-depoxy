@@ -59,7 +59,7 @@ call s:check_deps()
 " mode (and use async plugin so it doesn't cause input to briefly pause,
 " which is how a naïve `imap gW gW` would behave).
 
-function! s:setup_bindings_insert_mode_gW() abort
+function! s:CreateMap_InsertMode_gW() abort
   " - TIMED: When it's as easy mapping, like 'kj' or 'jk', it's easy to
   "   press the two keys quickly, within 100 msec.
   "   - But the 'gW' keypress is a little trickier, and author finds it
@@ -73,14 +73,14 @@ endfunction
 " Also wire visual mode `gW`.
 " - CXREF:
 "   ~/.vim/pack/embrace-vim/start/vim-webopen/autoload/embrace/browser.vim @ 267
-function! s:setup_bindings_visual_mode_gW() abort
+function! s:CreateMap_VisualMode_gW() abort
   " [y]ank selected text to `"` register, then paste `"` contents as fcn. arg.
   vnoremap gW y:call embrace#browser#WebOpenUrl('<C-r>"', 0)<CR>
 endfunction
 
 function! s:CreateMaps_gW() abort
-  call s:setup_bindings_insert_mode_gW()
-  call s:setup_bindings_visual_mode_gW()
+  call s:CreateMap_InsertMode_gW()
+  call s:CreateMap_VisualMode_gW()
 endfunction
 
 " -------------------------------------------------------------------
@@ -126,7 +126,7 @@ endfunction
 
 " MAYBE/2024-12-11: Add async mode map feature to restrict this abbrev.
 " to ft=rst,markdown,txt
-function! s:setup_bindings_insert_mode_3t() abort
+function! s:CreateMap_InsertMode_3t() abort
   call g:embrace#async_map#RegisterInsertModeMap(
   \   "3t",
   \   "i################\<CR>\<C-R>=strftime('%Y-%m-%d %H:%M')\<C-M>\<CR>################\<CR>\<CR>"
@@ -152,5 +152,5 @@ let g:vim_goto_file_use_simple_gf = 0
 call s:CreateMaps_gW()
 
 " Author's reST header injector (like an abbrev/snippet).
-call s:setup_bindings_insert_mode_3t()
+call s:CreateMap_InsertMode_3t()
 
