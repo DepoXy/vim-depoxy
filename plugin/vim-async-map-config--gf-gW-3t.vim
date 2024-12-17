@@ -89,7 +89,7 @@ endfunction
 "   ~/.vim/pack/embrace-vim/start/vim-webopen/autoload/embrace/browser.vim @ 267
 function! s:CreateMap_VisualMode_gW() abort
   " [y]ank selected text to `"` register, then paste `"` contents as fcn. arg.
-  vnoremap gW y:call embrace#browser#WebOpenUrl('<C-r>"', 0)<CR>
+  vnoremap gW y:call g:embrace#browser#WebOpenUrl('<C-r>"', 0)<CR>
 endfunction
 
 function! s:CreateMaps_gW() abort
