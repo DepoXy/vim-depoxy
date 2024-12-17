@@ -55,6 +55,20 @@ call s:check_deps()
 
 " -------------------------------------------------------------------
 
+" Use `gf` in insert and visual mode to run normal mode `gf`.
+"
+" CXREF:
+" ~/.vim/pack/embrace-vim/start/vim-goto-file-sh/after/plugin/async-mode-maps.vim
+
+function! s:CreateMaps_gf() abort
+  let g:vim_goto_file_add_insert_mode_map = 1
+  let g:vim_goto_file_add_visual_mode_map = 1
+  " (Don't) Use `gf` (instead of `gF`)
+  let g:vim_goto_file_use_simple_gf = 0
+endfunction
+
+" -------------------------------------------------------------------
+
 " Add async 2-character insert mode map so you can run `gW` from insert
 " mode (and use async plugin so it doesn't cause input to briefly pause,
 " which is how a naïve `imap gW gW` would behave).
@@ -141,12 +155,7 @@ endfunction
 let g:vim_async_map_timeout = 100
 
 " Enable `gf` insert and visual mode maps.
-" - CXREF:
-"   ~/.vim/pack/embrace-vim/start/vim-goto-file-sh/after/plugin/async-mode-maps.vim
-let g:vim_goto_file_add_insert_mode_map = 1
-let g:vim_goto_file_add_visual_mode_map = 1
-" (Don't) Use `gf` (instead of `gF`)
-let g:vim_goto_file_use_simple_gf = 0
+call s:CreateMaps_gf()
 
 " Enable `gW` insert and visual mode maps.
 call s:CreateMaps_gW()
