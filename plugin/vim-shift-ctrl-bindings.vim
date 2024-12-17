@@ -1,6 +1,6 @@
 " <Shift-Ctrl> bindings kludge.
 " Author: Landon Bouma <https://tallybark.com/>
-" Project: https://github.com/DepoXy/depoxy#🍯
+" Project: https://github.com/DepoXy/vim-depoxy#🤙
 " License: https://creativecommons.org/publicdomain/zero/1.0/
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2024 Landon Bouma.

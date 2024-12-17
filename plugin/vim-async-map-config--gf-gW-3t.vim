@@ -1,6 +1,6 @@
 " vim:tw=0:ts=2:sw=2:et:norl:
 " Author: Landon Bouma <https://tallybark.com/>
-" Project: https://github.com/DepoXy/depoxy#🍯
+" Project: https://github.com/DepoXy/vim-depoxy#🤙
 " Summary: Async insert and visual mode maps for `gf`, `gW`, etc.
 " License: GPLv3
 

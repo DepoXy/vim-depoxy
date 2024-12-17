@@ -15,7 +15,7 @@ DEPOXY AMBERS VIM			*depoxy-ambers-vim*
 This plugin configures Vim plugins specifically for the DepoXy Ambers
 development environment.
 
-Project page: https://github.com/DepoXy/depoxy#🍯
+Project page: https://github.com/DepoXy/vim-depoxy#🤙
 
 https://github.com/DepoXy/depoxy/blob/release/home/.vim/pack/DepoXy/start/depoxy-ambers-vim
 

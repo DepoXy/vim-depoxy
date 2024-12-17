@@ -1,6 +1,6 @@
 " vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Author: Landon Bouma <https://tallybark.com/>
-" Project: https://github.com/DepoXy/depoxy#🍯
+" Project: https://github.com/DepoXy/vim-depoxy#🤙
 " License: https://creativecommons.org/publicdomain/zero/1.0/
 "   Copyright © 2023 Landon Bouma.
 " Summary: vim-fugitive `gb` and `gc` maps to show and hide blame.
