@@ -79,9 +79,9 @@ function! s:CreateMap_InsertMode_gW() abort
   "   - But the 'gW' keypress is a little trickier, and author finds it
   "     taking ~165 msec. sometimes. So set a longer timeout specifically
   "     for this particular sequence.
-  let timeout = 250
+  let l:timeout = 250
 
-  call g:embrace#async_map#RegisterInsertModeMap("gW", "gW", timeout)
+  call g:embrace#async_map#RegisterInsertModeMap("gW", "gW", l:timeout)
 endfunction
 
 " Also wire visual mode `gW`.
