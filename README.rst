@@ -1,33 +1,65 @@
-###############################
-Vim Plugin |em_dash| Vim-DepoXy
-###############################
-
-.. |em_dash| unicode:: 0x2014 .. em dash
+####################################
+Opinionated Vim plugin for DepoXy 🤙
+####################################
 
 About This Plugin
 =================
 
-This plugin configures Vim plugins specially for the DepoXy
-development environment.
+This plugin configures other Vim plugins specifically for the
+DepoXy Ambers development environment.
 
-Configure FZF
-=============
+Mostly it creates map commands and sets global variables.
 
-Wires ``junegunn``'s ``fzf.vim`` plugin into the DepoXy Ambers experience,
-and sets a few commands, such as ``FZF`` and ``F``.
+Consider all the config in this plugin to be *highly* opinionated.
 
-Configure NERD Commenter
-========================
+- Learn more about DepoXy here:
 
-Sets NERD Commenter options just the way we want.
+  https://github.com/DepoXy/depoxy 🍯
 
-Installation
-============
+Configures FZF
+==============
 
-This plugin is installed by DepoXy.
+When ``vim-depoxy`` is installed by DepoXy, it performs the following steps:
 
-``async-mode-maps-gf-gW-3t.vim``
-================================
+- Installs author's FZF command, forked from https://github.com/junegunn/fzf:
+
+  https://github.com/landonb/fzf
+
+- Installs the ``junegunn/fzf`` plugin:
+
+  https://github.com/junegunn/fzf.vim
+
+- And creates a symlink to the Go wrapper:
+
+  ``plugin/fzf.vim -> ~/.kit/go/fzf/plugin/fzf.vim``
+
+.. |fzf-config.vim| replace:: ``plugin/fzf-config.vim``
+.. _fzf-config.vim: https://github.com/DepoXy/vim-depoxy/blob/release/plugin/fzf-config.vim
+
+- See the config file for the available commands:
+
+  |fzf-config.vim|_
+
+Configures NERD Commenter
+=========================
+
+- Configures NERDCommenter:
+
+  https://github.com/preservim/nerdcommenter
+
+.. |nerdcommenter-config.vim| replace:: ``plugin/nerdcommenter-config.vim``
+.. _nerdcommenter-config.vim: https://github.com/DepoXy/vim-depoxy/blob/release/plugin/nerdcommenter-config.vim
+
+- See the config file for the available commands:
+
+  |nerdcommenter-config.vim|_
+
+Configures Async Map
+====================
+
+- Configures ``vim-async-map``
+
+  https://github.com/embrace-vim/vim-async-map જ⁀➴
 
 ===========================  ============================  ==============================================================================
  Key Mapping                  Description                   Notes
@@ -50,4 +82,15 @@ This plugin is installed by DepoXy.
 
 ===========================  ============================  ==============================================================================
 
+.. |vim-async-map-config--gf-gW-3t.vim| replace:: ``plugin/vim-async-map-config--gf-gW-3t.vim``
+.. _vim-async-map-config--gf-gW-3t.vim: https://github.com/DepoXy/vim-depoxy/blob/release/plugin/vim-async-map-config--gf-gW-3t.vim
+
+- See the config file for more details:
+
+  |vim-async-map-config--gf-gW-3t.vim|_
+
+Installation
+============
+
+This plugin is installed by DepoXy.
 

@@ -1,39 +1,72 @@
 *vim_depoxy.txt*	For Vim version 7.4.	Last change: 2022 Dec 12
 
-DepoXy Ambers Vim Config and Functionality~
+VIM DEPOXY 🤙 Opinionated Vim plugin for DepoXy~
 
-DEPOXY AMBERS VIM			*depoxy-ambers-vim*
+VIM DEPOXY				*vim-depoxy*
 
-1. About This Plugin			|depoxy-ambers-vim-about|
-2. Configure FZF			|depoxy-ambers-vim-setup-fzf|
-3. Configure NERD Commenter		|depoxy-ambers-vim-setup-nerd|
-4. Async Mode Maps			|depoxy-ambers-vim-async-mode-maps|
-
-==============================================================================
-1. About This Plugin			*depoxy-ambers-vim-about*
-
-This plugin configures Vim plugins specifically for the DepoXy Ambers
-development environment.
-
-Project page: https://github.com/DepoXy/vim-depoxy#🤙
-
-https://github.com/DepoXy/depoxy/blob/release/home/.vim/pack/DepoXy/start/depoxy-ambers-vim
+1. About This Plugin			|vim-depoxy-about|
+2. Configures FZF			|vim-depoxy-about-fzf|
+3. Configures NERD Commenter		|vim-depoxy-about-nerd|
+4. Configures Async Map			|vim-depoxy-about-async-map|
 
 ==============================================================================
-2. Configure FZF			*depoxy-ambers-vim-setup-fzf*
+1. About This Plugin			*vim-depoxy-about*
 
-Wires `junegunn`'s `fzf.vim` plugin into the DepoXy Ambers experience,
-and sets a few commands, such as `FZF` and `F`.
+This plugin configures other Vim plugins specifically for the
+DepoXy Ambers development environment.
+
+Mostly it creates map commands and sets global variables.
+
+Consider all the config in this plugin to be *highly* opinionated.
+
+- Learn more about DepoXy here: 🍯
+
+  https://github.com/DepoXy/depoxy
+
+- Project page: 🤙
+
+  https://github.com/DepoXy/vim-depoxy
 
 ==============================================================================
-3. Configure NERD Commenter		*depoxy-ambers-vim-setup-nerd*
+2. Configures FZF			*vim-depoxy-about-fzf*
 
-Sets NERD Commenter options just the way we want.
+When `vim-depoxy` is installed by DepoXy, it performs the following steps:
+
+- Installs author's FZF command, forked from https://github.com/junegunn/fzf:
+
+  https://github.com/landonb/fzf
+
+- Installs the `junegunn/fzf` plugin:
+
+  https://github.com/junegunn/fzf.vim
+
+- And creates a symlink to the Go wrapper:
+
+  `plugin/fzf.vim -> ~/.kit/go/fzf/plugin/fzf.vim`
+
+See the config file for the available commands:
+
+  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/fzf-config.vim`
 
 ==============================================================================
-4. Async Mode Maps			*depoxy-ambers-vim-async-mode-maps*
+3. Configures NERD Commenter		*vim-depoxy-about-nerd*
 
-This commands work from insert mode.
+Configures NERDCommenter:
+
+  https://github.com/preservim/nerdcommenter
+
+See the config file for the available commands:
+
+  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/nerdcommenter-config.vim`
+
+==============================================================================
+4. Configures Mode Maps			*vim-depoxy-about-async-map*
+
+Configures `vim-async-map`:
+
+  https://github.com/embrace-vim/vim-async-map જ⁀➴
+
+These commands work from insert mode.
 
 				*i_gf*
 gf                      When in insert mode, `gf` opens the file path
@@ -56,5 +89,9 @@ gW                      When in insert mode, `gW` opens the URL under
 			Because implemented using async mode mapper,
 			completes immediately upon typing `3t`, if
 			you type both characters within 100 msec.
+
+See the config file for more details:
+
+  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/vim-async-map-config--gf-gW-3t.vim`
 
  vim:tw=78:ts=8:ft=help:norl:
