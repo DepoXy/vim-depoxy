@@ -69,6 +69,28 @@ endfunction
 
 " -------------------------------------------------------------------
 
+" Open files like `gf` but in adjacent window.
+"
+" CXREF:
+" ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
+
+" MAYBE/2024-12-16: Add true `gF` support, and honor line number postfix.
+
+function! s:CreateMaps_gF() abort
+  let l:timeout = 250
+
+  call g:embrace#async_map#RegisterInsertModeMap(
+    \ "gF",
+    \ ":call g:embrace#windows#open_file_adjacent()\<CR>",
+    \ l:timeout,
+    \ )
+
+  nnoremap gF :call g:embrace#windows#open_file_adjacent()<CR>
+  vnoremap gF y:call g:embrace#windows#open_file_adjacent('<C-r>"')<CR>
+endfunction
+
+" -------------------------------------------------------------------
+
 " Add async 2-character insert mode map so you can run `gW` from insert
 " mode (and use async plugin so it doesn't cause input to briefly pause,
 " which is how a naïve `imap gW gW` would behave).
@@ -156,6 +178,9 @@ let g:vim_async_map_timeout = 100
 
 " Enable `gf` insert and visual mode maps.
 call s:CreateMaps_gf()
+
+" Open files like `gf` but in adjacent window.
+call s:CreateMaps_gF()
 
 " Enable `gW` insert and visual mode maps.
 call s:CreateMaps_gW()
