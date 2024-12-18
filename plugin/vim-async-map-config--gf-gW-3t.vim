@@ -65,6 +65,20 @@ function! s:CreateMaps_gf() abort
   let g:vim_goto_file_add_visual_mode_map = 1
   " (Don't) Use `gf` (instead of `gF`)
   let g:vim_goto_file_use_simple_gf = 0
+
+  " Tell WrapNav not to fiddle with 'j' or 'k'.
+  " - CXREF:
+  "   ~/.vim/pack/landonb/start/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
+  let g:toggle_textwrap_disable_kj = 1
+
+  silent! nunmap <silent> k
+  silent! nunmap <silent> j
+
+  if &wrap
+    call g:toggle_textwrap#wrapnav#EnableWrapNav()
+  else
+    call g:toggle_textwrap#wrapnav#DisableWrapNav()
+  endif
 endfunction
 
 " -------------------------------------------------------------------
