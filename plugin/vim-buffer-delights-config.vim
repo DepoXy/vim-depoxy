@@ -27,11 +27,14 @@ let g:loaded_vim_depoxy_vim_buffer_delights_config = 1
 " CXREF:
 " ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
 
-function! s:CreateMaps()
-  nnoremap <Leader>dg :call g:embrace#windows#CloseVimHelpWindow()<CR>
-  inoremap <Leader>dg <C-o>:call g:embrace#windows#CloseVimHelpWindow()<CR>
+function! s:CreateMaps__CloseVimHelpWindow(key_sequence = '<Leader>dG') abort
+  nnoremap <silent> <expr> <script> <Plug>(vim-depoxy-close-vim-help-window)
+    \ g:embrace#windows#CloseVimHelpWindow()
 
+  execute 'nnoremap <silent> ' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
+
+  execute 'nnoremap <silent> ' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
 endfunction
 
-call s:CreateMaps()
+call s:CreateMaps__CloseVimHelpWindow('<Leader>dG')
 
