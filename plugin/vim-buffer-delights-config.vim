@@ -8,6 +8,22 @@
 
 " -------------------------------------------------------------------
 
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_buffer_delights_config
+endif
+
+if exists('g:loaded_vim_depoxy_vim_buffer_delights_config') || &cp
+
+  finish
+endif
+
+let g:loaded_vim_depoxy_vim_buffer_delights_config = 1
+
+" -------------------------------------------------------------------
+
 " CXREF:
 " ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
 

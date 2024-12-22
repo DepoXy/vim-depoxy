@@ -7,13 +7,19 @@
 
 " ***
 
-" YOU: Uncomment and <F9> to source/reload.
-"  silent! unlet g:plugin_add_fzf_path
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:plugin_add_fzf_path") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_fzf_config
+endif
+
+if exists('g:loaded_vim_depoxy_fzf_config') || &cp
+
   finish
 endif
-let g:plugin_add_fzf_path = 1
+
+let g:loaded_vim_depoxy_fzf_config = 1
 
 " ***
 

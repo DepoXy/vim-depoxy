@@ -7,17 +7,19 @@
 
 " -------------------------------------------------------------------
 
-" USAGE: Unlet var (or nix finish) & press <F9> to reload this plugin.
-" - DEP: https://github.com/landonb/vim-source-reloader#↩️
-"
-" silent! unlet g:loaded_vim_depoxy_plugin_vim_fugitive_blame
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:loaded_vim_depoxy_plugin_vim_fugitive_blame") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_fugitive_blame
+endif
+
+if exists('g:loaded_vim_depoxy_vim_fugitive_blame') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_plugin_vim_fugitive_blame = 1
+let g:loaded_vim_depoxy_vim_fugitive_blame = 1
 
 " -------------------------------------------------------------------
 

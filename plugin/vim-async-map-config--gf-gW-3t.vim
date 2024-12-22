@@ -6,17 +6,19 @@
 
 " -------------------------------------------------------------------
 
-" USAGE: Unlet var (or nix finish) & press <F9> to reload this plugin.
-" USING: https://github.com/landonb/vim-source-reloader#↩️
-"
-"  silent! unlet g:loaded_vim_depoxy_plugin_async_mode_maps
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:loaded_vim_depoxy_plugin_async_mode_maps") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_async_map_config
+endif
+
+if exists('g:loaded_vim_depoxy_vim_async_map_config') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_plugin_async_mode_maps = 1
+let g:loaded_vim_depoxy_vim_async_map_config = 1
 
 " -------------------------------------------------------------------
 

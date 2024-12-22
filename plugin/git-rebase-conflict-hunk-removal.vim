@@ -7,14 +7,19 @@
 
 " ########################################################################
 
-" DEV: Uncomment the 'unlet', then <F9> to reload this file.
-"       https://github.com/landonb/vim-source-reloader
-"  silent! unlet g:loaded_conflict_marker_removal
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:loaded_conflict_marker_removal") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_git_rebase_conflict
+endif
+
+if exists('g:loaded_vim_depoxy_git_rebase_conflict') || &cp
+
   finish
 endif
-let g:loaded_conflict_marker_removal = 1
+
+let g:loaded_vim_depoxy_git_rebase_conflict = 1
 
 " ########################################################################
 

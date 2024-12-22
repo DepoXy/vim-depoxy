@@ -6,6 +6,22 @@
 
 " -------------------------------------------------------------------
 
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_save_close_quit_maps
+endif
+
+if exists('g:loaded_vim_depoxy_vim_save_close_quit_maps') || &cp
+
+  finish
+endif
+
+let g:loaded_vim_depoxy_vim_save_close_quit_maps = 1
+
+" -------------------------------------------------------------------
+
 function! s:CreateMaps()
   " LATER/2024-12-13 14:33: But will you use this instead of <M-f>c?
   nnoremap <Leader>dc :Bdelete<CR>

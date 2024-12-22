@@ -7,14 +7,19 @@
 
 " ########################################################################
 
-" DEV: Uncomment the 'unlet', then <F9> to reload this file.
-"       https://github.com/landonb/vim-source-reloader
-"  silent! unlet g:loaded_vim_shift_ctrl_bindings
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists("g:loaded_vim_shift_ctrl_bindings") || &cp
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_shift_ctrl_bindings
+endif
+
+if exists('g:loaded_vim_depoxy_vim_shift_ctrl_bindings') || &cp
+
   finish
 endif
-let g:loaded_vim_shift_ctrl_bindings = 1
+
+let g:loaded_vim_depoxy_vim_shift_ctrl_bindings = 1
 
 " ########################################################################
 

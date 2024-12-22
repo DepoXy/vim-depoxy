@@ -7,16 +7,19 @@
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 
-" YOU: Uncomment next 'unlet', then <F9> to reload this file.
-"      (Iff: https://github.com/landonb/vim-source-reloader)
-"
-" silent! unlet g:loaded_plugin_map_nop_q_r_s
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
-if exists('g:loaded_plugin_map_nop_q_r_s') || &cp || v:version < 800
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_map_nop_q_r_s
+endif
+
+if exists('g:loaded_vim_depoxy_map_nop_q_r_s') || &cp || v:version < 800
+
   finish
 endif
 
-let g:loaded_plugin_map_nop_q_r_s = 1
+let g:loaded_vim_depoxy_map_nop_q_r_s = 1
 
 " +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 

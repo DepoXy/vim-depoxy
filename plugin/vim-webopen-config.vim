@@ -8,6 +8,22 @@
 
 " -------------------------------------------------------------------
 
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet g:loaded_vim_depoxy_vim_webopen_config
+endif
+
+if exists('g:loaded_vim_depoxy_vim_webopen_config') || &cp
+
+  finish
+endif
+
+let g:loaded_vim_depoxy_vim_webopen_config = 1
+
+" -------------------------------------------------------------------
+
 " Option 1: Define individual global variables for each feature.
 " - This option creates three maps for the specified key sequence,
 "   one each in the three modes: normal, insert, and visual.
