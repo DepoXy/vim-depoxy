@@ -24,14 +24,24 @@ let g:loaded_vim_depoxy_vim_buffer_delights_config = 1
 
 " -------------------------------------------------------------------
 
+" DUNNO: Cannot use <expr> for <Plug> call, e.g.:
+"   nnoremap <silent> <expr> <script> <Plug>(vim-depoxy-close-vim-help-window)
+"     \ g:embrace#windows#CloseVimHelpWindow()
+" which cause error such as:
+"   Error detected while processing function embrace#windows#CloseVimHelpWindow:
+"   line    9:
+"   E565: Not allowed to change text or change window
+" which is this line:
+"   execute l:curr_winnr . "wincmd q"
+
 " CXREF:
 " ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
 
 function! s:CreateMaps__CloseVimHelpWindow(key_sequence = '<Leader>dG') abort
-  nnoremap <silent> <expr> <script> <Plug>(vim-depoxy-close-vim-help-window)
-    \ g:embrace#windows#CloseVimHelpWindow()
+  nnoremap <silent> <script> <Plug>(vim-depoxy-close-vim-help-window)
+    \ :call g:embrace#windows#CloseVimHelpWindow()<CR>
 
-  execute 'nnoremap <silent> ' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
+  execute 'nnoremap' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
 
   execute 'inoremap ' .. a:key_sequence .. ' <C-O><Plug>(vim-depoxy-close-vim-help-window)'
 endfunction
