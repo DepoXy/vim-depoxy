@@ -33,7 +33,7 @@ function! s:CreateMaps__CloseVimHelpWindow(key_sequence = '<Leader>dG') abort
 
   execute 'nnoremap <silent> ' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
 
-  execute 'nnoremap <silent> ' .. a:key_sequence .. ' <Plug>(vim-depoxy-close-vim-help-window)'
+  execute 'inoremap ' .. a:key_sequence .. ' <C-O><Plug>(vim-depoxy-close-vim-help-window)'
 endfunction
 
 call s:CreateMaps__CloseVimHelpWindow('<Leader>dG')
