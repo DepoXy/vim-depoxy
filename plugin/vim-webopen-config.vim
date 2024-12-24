@@ -12,7 +12,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_vim_webopen_config
+  unlet! g:loaded_vim_depoxy_vim_webopen_config
 endif
 
 if exists('g:loaded_vim_depoxy_vim_webopen_config') || &cp

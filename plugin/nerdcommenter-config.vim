@@ -22,7 +22,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_nerdcommenter_config
+  unlet! g:loaded_vim_depoxy_nerdcommenter_config
 endif
 
 if exists('g:loaded_vim_depoxy_nerdcommenter_config') || &cp || v:version < 800

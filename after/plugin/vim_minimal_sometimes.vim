@@ -10,7 +10,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_vim_minimal_sometimes
+  unlet! g:loaded_vim_depoxy_vim_minimal_sometimes
 endif
 
 if exists('g:loaded_vim_depoxy_vim_minimal_sometimes') || &cp

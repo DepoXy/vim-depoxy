@@ -10,7 +10,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_plugin
+  unlet! g:loaded_vim_depoxy_plugin
 endif
 
 if exists('g:loaded_vim_depoxy_plugin') || &cp

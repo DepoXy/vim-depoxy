@@ -11,7 +11,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_set_diffopt_hiddenoff
+  unlet! g:loaded_vim_depoxy_set_diffopt_hiddenoff
 endif
 
 if exists('g:loaded_vim_depoxy_set_diffopt_hiddenoff') || &cp

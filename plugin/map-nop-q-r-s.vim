@@ -11,7 +11,7 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet g:loaded_vim_depoxy_map_nop_q_r_s
+  unlet! g:loaded_vim_depoxy_map_nop_q_r_s
 endif
 
 if exists('g:loaded_vim_depoxy_map_nop_q_r_s') || &cp || v:version < 800
