@@ -4,7 +4,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2024 Landon Bouma.
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -20,7 +20,7 @@ endif
 
 let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " Determine if Vim running as EDITOR for specific commands,
 " and wire fast <Ctrl-S> save-and-quit (e.g., :wq).
@@ -124,6 +124,4 @@ function! s:MapCtrlSSaveAndExitForSpecialApps()
 endfunction
 
 call s:MapCtrlSSaveAndExitForSpecialApps()
-
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 

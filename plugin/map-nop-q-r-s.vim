@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2020-2021 Landon Bouma.
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -21,7 +21,7 @@ endif
 
 let g:loaded_vim_depoxy_map_nop_q_r_s = 1
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" -------------------------------------------------------------------
 
 " 2020-04-21: Brilliant! I've been tripping on "q:" accidentally for years!
 " - I've never use the command-line window, except accidentally,
@@ -39,6 +39,4 @@ noremap q:: :<C-F>
 " Unmapping Q also suggested, but I don't have a problem with *this* Q.
 "
 "   nnoremap Q <nop>
-
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 

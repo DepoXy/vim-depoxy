@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2011-2021 Landon Bouma.
 
-" ***
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -21,7 +21,7 @@ endif
 
 let g:loaded_vim_depoxy_fzf_config = 1
 
-" ***
+" -------------------------------------------------------------------
 
 " USAGE: This plugin wires the following bindings:
 "

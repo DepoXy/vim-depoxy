@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2011-2021 Landon Bouma.
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" -------------------------------------------------------------------
 
 " REFER:
 "
@@ -16,7 +16,7 @@
 "   https://github.com/tpope/vim-commentary
 "   https://github.com/tomtom/tcomment_vim
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -32,7 +32,7 @@ endif
 
 let g:loaded_vim_depoxy_nerdcommenter_config = 1
 
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
+" -------------------------------------------------------------------
 
 " -------------------------------------------------------------------------
 " 2021-01-23: NERD Commenter
@@ -329,6 +329,4 @@ let g:NERDCreateDefaultMappings = 0
 
 call s:RemoveMaps()
 call s:CreateMaps()
-
-" +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ "
 

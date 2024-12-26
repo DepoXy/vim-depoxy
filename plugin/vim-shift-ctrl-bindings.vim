@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2024 Landon Bouma.
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -21,7 +21,7 @@ endif
 
 let g:loaded_vim_depoxy_vim_shift_ctrl_bindings = 1
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " KLUGE: <Shift-Ctrl> Vim bindings.
 " - CXREF: See Alacritty substitutions for terminal `vim`:
@@ -42,6 +42,4 @@ inoremap  <C-O>:call CursorFriendlyIndent(1)<CR>
 " CXREF: ~/.depoxy/ambers/home/.config/alacritty/alacritty.toml
 "   { key = "W", mods = "Control|Shift", chars = "\uE016" },
 inoremap  <C-O>:<C-U>call dubs_edit_juice_backspace#delete_back_line()<CR>
-
-" ########################################################################
 

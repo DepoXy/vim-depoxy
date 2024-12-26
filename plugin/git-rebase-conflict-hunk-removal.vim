@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2020 Landon Bouma.
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -21,7 +21,7 @@ endif
 
 let g:loaded_vim_depoxy_git_rebase_conflict = 1
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " Bind <leader>dx to a substitute command that removes
 " the <<< === >>> hunk delimiters.
@@ -64,6 +64,4 @@ endfunction
 if ! exists("g:conflict_marker_removal_disable") || ! g:conflict_marker_removal_disable
   call s:CreateConflictMarkerRemovalMaps()
 endif
-
-" ########################################################################
 

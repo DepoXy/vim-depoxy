@@ -5,7 +5,7 @@
 "  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Copyright © 2020 Landon Bouma.
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
@@ -21,7 +21,7 @@ endif
 
 let g:loaded_vim_depoxy_vim_beautifold_config = 1
 
-" ########################################################################
+" -------------------------------------------------------------------
 
 " My convention is that content starts one blank after the title,
 " and a blank follows content, so that's a minimum 3 lines of content
@@ -50,6 +50,4 @@ let g:restfold_weldable_max_lead_spaces = 3
 "   e.g., see judge design folds mostly by
 "     g:restfold_weldable_min_content_lines = 3
 let g:restfold_weldable_unicode_enable_all = 1
-
-" ########################################################################
 
