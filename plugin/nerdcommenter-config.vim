@@ -1,9 +1,9 @@
-" NERD Commenter settings
+" vim:tw=0:ts=2:sw=2:et:norl:ft=vim
 " Author: Landon Bouma <https://tallybark.com/>
 " Project: https://github.com/DepoXy/vim-depoxy#🤙
 " License: https://creativecommons.org/publicdomain/zero/1.0/
-"  vim:tw=0:ts=2:sw=2:et:norl:ft=vim
-" Copyright © 2011-2021 Landon Bouma.
+"   Copyright © 2011-2021 Landon Bouma.
+" Summary: NERD Commenter settings
 
 " -------------------------------------------------------------------
 
