@@ -117,7 +117,7 @@ function! s:MapCtrlSSaveAndExitForSpecialApps()
 
   if !v:shell_error
     " Ctrl-s to save and exit from any mode.
-    noremap <C-s> :wq<CR>
+    nnoremap <C-s> :wq<CR>
     vnoremap <C-s> <Esc>:wq<CR>
     inoremap <C-s> <Esc>:wq<CR>
   endif
