@@ -33,6 +33,9 @@ function! s:CreateMaps()
   " - So let's try something a little more cumbersome (but still
   "   easier than <Alt-f>c).
   "   - Which makes me wonder if \dq save-all-quit should be \dQ...
+  "
+  " CXREF:
+  " ~/.vim/pack/vim-scripts/start/bbye/plugin/bbye.vim
   nnoremap <Leader>dC :Bdelete<CR>
   inoremap <Leader>dC <C-o>:Bdelete<CR>
 
