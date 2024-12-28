@@ -10,22 +10,22 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet! g:loaded_vim_depoxy_vim_filetype_help
+  unlet! g:loaded_vim_depoxy_make_my_help_modifiable
 endif
 
-if exists('g:loaded_vim_depoxy_vim_filetype_help') || &cp
+if exists('g:loaded_vim_depoxy_make_my_help_modifiable') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_vim_filetype_help = 1
+let g:loaded_vim_depoxy_make_my_help_modifiable = 1
 
 " -------------------------------------------------------------------
 
 " Let me modify my own help files when opened via :help.
 
 function! s:CreateAutocommands() abort
-  augroup vim-depoxy--vim-filetype-help
+  augroup vim-depoxy--make-my-help-modifiable
     au!
 
     autocmd FileType help
