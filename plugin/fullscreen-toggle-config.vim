@@ -8,6 +8,22 @@
 
 " -------------------------------------------------------------------
 
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:loaded_vim_depoxy_fullscreen_toggle_config
+endif
+
+if exists('g:loaded_vim_depoxy_fullscreen_toggle_config') || &cp
+
+  finish
+endif
+
+let g:loaded_vim_depoxy_fullscreen_toggle_config = 1
+
+" -------------------------------------------------------------------
+
 " CXREF:
 " ~/.vim/pack/landonb/start/vim-fullscreen-toggle/autoload/embrace/resize.vim
 
