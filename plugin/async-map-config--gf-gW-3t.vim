@@ -10,15 +10,15 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet! g:loaded_vim_depoxy_vim_async_map_config
+  unlet! g:loaded_vim_depoxy_async_map_config
 endif
 
-if exists('g:loaded_vim_depoxy_vim_async_map_config') || &cp
+if exists('g:loaded_vim_depoxy_async_map_config') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_vim_async_map_config = 1
+let g:loaded_vim_depoxy_async_map_config = 1
 
 " -------------------------------------------------------------------
 

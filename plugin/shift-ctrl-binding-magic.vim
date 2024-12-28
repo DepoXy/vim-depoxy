@@ -11,15 +11,15 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet! g:loaded_vim_depoxy_vim_shift_ctrl_bindings
+  unlet! g:loaded_vim_depoxy_shift_ctrl_binding_magic
 endif
 
-if exists('g:loaded_vim_depoxy_vim_shift_ctrl_bindings') || &cp
+if exists('g:loaded_vim_depoxy_shift_ctrl_binding_magic') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_vim_shift_ctrl_bindings = 1
+let g:loaded_vim_depoxy_shift_ctrl_binding_magic = 1
 
 " -------------------------------------------------------------------
 

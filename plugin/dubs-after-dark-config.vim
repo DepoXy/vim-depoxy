@@ -12,15 +12,15 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet! g:loaded_vim_depoxy_vim_after_dark_config
+  unlet! g:loaded_vim_depoxy_dubs_after_dark_config
 endif
 
-if exists('g:loaded_vim_depoxy_vim_after_dark_config') || &cp
+if exists('g:loaded_vim_depoxy_dubs_after_dark_config') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_vim_after_dark_config = 1
+let g:loaded_vim_depoxy_dubs_after_dark_config = 1
 
 " -------------------------------------------------------------------
 

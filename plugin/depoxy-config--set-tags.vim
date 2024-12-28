@@ -10,15 +10,15 @@
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
 if expand('%:p') ==# expand('<sfile>:p')
-  unlet! g:loaded_vim_depoxy_plugin
+  unlet! g:loaded_vim_depoxy_depoxy_config_set_tags
 endif
 
-if exists('g:loaded_vim_depoxy_plugin') || &cp
+if exists('g:loaded_vim_depoxy_depoxy_config_set_tags') || &cp
 
   finish
 endif
 
-let g:loaded_vim_depoxy_plugin = 1
+let g:loaded_vim_depoxy_depoxy_config_set_tags = 1
 
 " -------------------------------------------------------------------
 
