@@ -32,6 +32,9 @@ let g:fstoggle_pixels_per_col = 7.014
 " Default: s:pixels_per_row = 16.180
 let g:fstoggle_pixels_per_row = 14.580
 
+let g:fstoggle_on_init_min_lines = 68
+let g:fstoggle_on_init_min_columns = 272
+
 " CXREF:
 " ~/.vim/pack/embrace-vim/start/vim-fullscreen-toggle/autoload/embrace/fullscreen_toggle.vim
 
