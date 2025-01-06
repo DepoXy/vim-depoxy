@@ -103,6 +103,14 @@ function! s:CreateMaps_gF() abort
 
   nnoremap gF :call g:embrace#windows#open_file_adjacent()<CR>
   vnoremap gF y:call g:embrace#windows#open_file_adjacent('<C-r>"')<CR>
+
+  " Now that gF remapped, assign gF to regular gf.
+  " - THOTS: I cannot think of when I'd want to use gf and not gF...
+  "   though if there were ever such a case, then maybe reassign
+  "   open_file_adjacent to something other than gF so you can
+  "   reclaim regular gf and gF.
+  "   - You can also select a path and gf and it'll do regular gf.
+  nnoremap gf gF 
 endfunction
 
 " -------------------------------------------------------------------
