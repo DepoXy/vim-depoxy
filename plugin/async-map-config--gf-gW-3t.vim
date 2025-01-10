@@ -110,7 +110,7 @@ function! s:CreateMaps_gF() abort
   "   open_file_adjacent to something other than gF so you can
   "   reclaim regular gf and gF.
   "   - You can also select a path and gf and it'll do regular gf.
-  nnoremap gf gF 
+  nnoremap gf gF
 endfunction
 
 " -------------------------------------------------------------------
