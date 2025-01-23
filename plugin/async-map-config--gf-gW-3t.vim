@@ -47,13 +47,16 @@ function! s:check_deps() abort
   if !exists("*embrace#async_map#RegisterInsertModeMap")
     echom "ALERT: Please install embrace-vim/vim-async-map to enable async mode maps"
 
-    finish
+    return 0
   endif
 
   return 1
 endfunction
 
-call s:check_deps()
+if !s:check_deps()
+
+  finish
+endif
 
 " -------------------------------------------------------------------
 
