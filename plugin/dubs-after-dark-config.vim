@@ -24,6 +24,11 @@ let g:loaded_vim_depoxy_dubs_after_dark_config = 1
 
 " -------------------------------------------------------------------
 
+" NOTED/2025-01-23: This call unnecessary, as it's done by
+" depoxy-vim/.vimrc:
+"
+"   ~/.depoxy/ambers/home/.vim/.vimrc
+
 try
   colorscheme after-dark
 catch
