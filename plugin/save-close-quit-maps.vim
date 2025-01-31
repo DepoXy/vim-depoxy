@@ -43,7 +43,7 @@ function! s:CreateMaps()
   "        <M-f>e → s:RecreateDubsVimMappings()
   "        <M-f>x → s:RecreateBuiltinMenuMappings_File()
   " ~/.vim/pack/landonb/start/dubs_appearance/plugin/mimic_menu_keymap.vim
-  noremap <Leader>dQ :wa<CR>:only<CR>:enew<CR>:BufOnly<CR>:qa<CR>
+  nnoremap <Leader>dQ :wa<CR>:only<CR>:enew<CR>:BufOnly<CR>:qa<CR>
   inoremap <Leader>dQ <C-o>:wa<CR><C-O>:only<CR><C-O>:enew<CR><C-O>:BufOnly<CR><C-O>:qa<CR>
 endfunction
 
