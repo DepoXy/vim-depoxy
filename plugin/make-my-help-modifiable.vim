@@ -29,7 +29,7 @@ function! s:CreateAutocommands() abort
     au!
 
     autocmd FileType help
-      \ if match(expand('%:p:h'), '/.vim/pack/\(landonb\|DepoXy\|embrace-vim\)/start/') > -1
+      \ if match(expand('%:p:h'), '/.kit/nvim/\(landonb\|DepoXy\|embrace-vim\)/start/') > -1
       \ |   set modifiable noreadonly
       \ | endif
   augroup END
