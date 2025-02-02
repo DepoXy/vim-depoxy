@@ -49,13 +49,14 @@ let g:NERDCreateDefaultMappings = 1
 let g:NERDSpaceDelims = 1
 
 " 'Use compact syntax for prettified multi-line comments'
-" - FIXME/2021-01-23: EXPLAIN:
+" - DUNNO/2021-01-23: Haven't demoed this.
 "
 "  let g:NERDCompactSexyComs = 1
 
 " - MAYBE/2021-01-23: DEMO and EXPLAIN these:
 "
-" 'Align line-wise comment delimiters flush left instead of following code indentation'
+" 'Align line-wise comment delimiters flush left instead
+"  of following code indentation'
 " (lb): The code shows four options: 'none', 'start', 'left', 'both'.
 " - Demoing DefaultAlign with the three comment commands reveals:
 "   - Invert: - 'left', 'both', 'none' all seem same to me, and insert
@@ -79,14 +80,15 @@ let g:NERDSpaceDelims = 1
 "   - AlignLeft: - Bingo! This is the one I'll use. DefaultAlign doesn't matter.
 "                  Adds comments after leading white, even on first and final
 "                  selected line, regardless of where cursor starts or stops.
-"                  - Only caveat is multiline select: If the last line's newline
-"                    is included in the selection, the line *after* that final line
-"                    is also commented. This is not too hard to workaround, and it
-"                    won't be hard for me to remember to do, because it behaves
-"                    similar to another feature I use, the <F2> parT command (found in
-"                    dubs_edit_juice.vim) that also mistakes the final newline to mean
-"                    including the line following it. And in any case, AlignLeft works
-"                    more how (I think) I'd like to use this commenter, so I'm happy to
+"                  - Only caveat is multiline select: If the last line's
+"                    newline is included in the selection, the line *after*
+"                    that final line is also commented. This is not too hard
+"                    to workaround, and it won't be hard for me to remember to
+"                    do, because it behaves similar to another feature I use,
+"                    the <F2> parT command (found in dubs_edit_juice.vim) that
+"                    also mistakes the final newline to mean including the line
+"                    following it. And in any case, AlignLeft works more how
+"                    (I think) I'd like to use this commenter, so I'm happy to
 "                    live with this one CAVEAT.
 "                    - MAYBE/2021-01-25: Make AlignLeft (and parT) chop final newline
 "                                        from selection (or do whatever it takes) to
@@ -119,7 +121,7 @@ let g:NERDCommentEmptyLines = 1
 let g:NERDTrimTrailingWhitespace = 1
 
 " 'Enable NERDCommenterToggle to check all selected lines is commented or not'
-" - FIXME/2021-01-23: EXPLAIN:
+" - DUNNO/2021-01-23: Haven't demoed this.
 "
 "  let g:NERDToggleCheckAllLines = 1
 
@@ -311,7 +313,7 @@ function! s:RemoveMaps()
   call s:ManageMaps(0)
 endfunction
 
-" Manage the mappings ourshells.
+" We'll manage the mappings *ourshells*.
 "
 " (Note that NERDCommenter checks hasmapto() before setting map,
 "  so setting default mappings zero is only necessary if you want
