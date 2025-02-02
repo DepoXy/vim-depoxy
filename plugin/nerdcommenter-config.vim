@@ -38,12 +38,19 @@ let g:loaded_vim_depoxy_nerdcommenter_config = 1
 " 2021-01-23: NERD Commenter
 " -------------------------------------------------------------------------
 
-" FIXME/2021-01-23: Belongs in a DepoXy Ambers trap file.
+" REFER: https://github.com/preservim/nerdcommenter
 
-" https://github.com/preservim/nerdcommenter
-
-" 'Create default mappings'
-let g:NERDCreateDefaultMappings = 1
+" CXREF: See comment re: Why setting this value here is 'too late'
+" if you're using the classic preservim/nerdcommenter project (not
+" the DepoXy fork) and relying on packadd (~/.vim/pack) load order.
+" - So this value needs to be set during ~/.config/nvim/lua/init.lua
+"   or ~/.vimrc startup.
+"   - If you're running nvim-depoxy, you'll see this variable set
+"     from the lazy.nvim spec:
+"       ~/.kit/nvim/nvim-depoxy/.config/nvim/lua/specs/group--most-entirely.lua
+"     As well as from the vim-plug preflight module:
+"       ~/.kit/nvim/nvim-depoxy/.vim/autoload/depoxy/plug_pre.vim
+let g:NERDCreateDefaultMappings = 0
 
 " 'Add spaces after comment delimiters by default'
 let g:NERDSpaceDelims = 1
@@ -319,15 +326,6 @@ endfunction
 "  so setting default mappings zero is only necessary if you want
 "  to only enable a few mappings; i.e., you can change mappings and
 "  NERDCommenter won't clobber.)
-
-" NOTE: This setting actually comes *too late* -- or at least we
-" cannot control plugin load order, and on @macOS, NERDCommenter
-" loads before this plugin.
-" - As a solution, ~/.vimrc (the top-level, core Dubs Vim project)
-"   also includes this setting (which is not ideal, because separation
-"   of concerns, coupling, business logic, and all that jazz; but such
-"   is life).
-let g:NERDCreateDefaultMappings = 0
 
 call s:RemoveMaps()
 call s:CreateMaps()
