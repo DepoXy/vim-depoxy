@@ -8,6 +8,16 @@
 
 " -------------------------------------------------------------------
 
+" ISOFF/2025-02-01: Now called by ~/.config/nvim/init.lua or ~/.vimrc
+" so that it loads before any plugin.
+" - Not that author has ever had any problem loading at plugin time,
+"   but at leasy lazy.nvim documentation stresses that you load and
+"   set the colorscheme before loading other plugins.
+
+finish
+
+" -------------------------------------------------------------------
+
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
