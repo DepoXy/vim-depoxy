@@ -35,7 +35,7 @@ let g:loaded_vim_depoxy_buffer_delights_config = 1
 "   execute l:curr_winnr . "wincmd q"
 
 " CXREF:
-" ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
+" ~/.kit/nvim/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
 
 function! s:CreateMaps__CloseVimHelpWindow(key_sequence = '<Leader>dG') abort
   nnoremap <silent> <script> <Plug>(vim-depoxy-close-vim-help-window)

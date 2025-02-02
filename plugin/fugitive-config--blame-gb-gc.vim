@@ -36,7 +36,7 @@ let g:loaded_vim_depoxy_fugitive_config = 1
 " Note that vim-fugitive defines 'gc' already, but it's same as 'gC'.
 " So we'll appropriate 'gc' for ourselves, but leave 'gC'.
 " 
-" - REFER: ~/.vim/pack/tpope/start/vim-fugitive/autoload/fugitive.vim @ 7950
+" - REFER: ~/.kit/nvim/tpope/start/vim-fugitive/autoload/fugitive.vim @ 7950
 "
 "     call s:Map('n', 'gC', “:<C-U>exe 'Gpedit ' .
 "       <SID>fnameescape(<SID>ContainingCommit())<CR>”, '<silent>')
@@ -45,7 +45,7 @@ let g:loaded_vim_depoxy_fugitive_config = 1
 "
 " - Oddly, neither option appears documented:
 "
-"   ~/.vim/pack/tpope/start/vim-fugitive/doc/fugitive.txt
+"   ~/.kit/nvim/tpope/start/vim-fugitive/doc/fugitive.txt
 "
 " - Also, the author cannot quite figure out what they're suppose to do.
 "   If I run :Git blame and jump back to the source file, 'gc'/'gC' from

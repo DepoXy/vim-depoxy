@@ -46,7 +46,7 @@ When `vim-depoxy` is installed by DepoXy, it performs the following steps:
 
 See the config file for the available commands:
 
-  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/fzf-config.vim`
+  `~/.kit/nvim/DepoXy/start/vim-depoxy/plugin/fzf-config.vim`
 
 ==============================================================================
 3. Configures NERD Commenter		*vim-depoxy-about-nerd*
@@ -57,7 +57,7 @@ Configures NERDCommenter:
 
 See the config file for the available commands:
 
-  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/nerdcommenter-config.vim`
+  `~/.kit/nvim/DepoXy/start/vim-depoxy/plugin/nerdcommenter-config.vim`
 
 ==============================================================================
 4. Configures Mode Maps			*vim-depoxy-about-async-map*
@@ -92,6 +92,6 @@ gW                      When in insert mode, `gW` opens the URL under
 
 See the config file for more details:
 
-  `~/.vim/pack/DepoXy/start/vim-depoxy/plugin/vim-async-map-config--gf-gW-3t.vim`
+  `~/.kit/nvim/DepoXy/start/vim-depoxy/plugin/vim-async-map-config--gf-gW-3t.vim`
 
  vim:tw=78:ts=8:ft=help:norl:

@@ -37,7 +37,7 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 "
 " - CXREF: You'll find the easier solution wired in dubs_edit_juice:
 "
-"   ~/.vim/pack/landonb/start/dubs_edit_juice/after/plugin/dubs_after_juice.vim
+"   ~/.kit/nvim/landonb/start/dubs_edit_juice/after/plugin/dubs_after_juice.vim
 "
 " - MAYBE/2024-08-07: We could remove this plugin if we devise an
 "   environ approach for `dob edit`.

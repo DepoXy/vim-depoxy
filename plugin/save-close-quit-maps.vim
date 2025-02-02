@@ -35,14 +35,14 @@ function! s:CreateMaps()
   "   - Which makes me wonder if \dq save-all-quit should be \dQ...
   "
   " CXREF:
-  " ~/.vim/pack/vim-scripts/start/bbye/plugin/bbye.vim
+  " ~/.kit/nvim/vim-scripts/start/bbye/plugin/bbye.vim
   nnoremap <Leader>dC :Bdelete<CR>
   inoremap <Leader>dC <C-o>:Bdelete<CR>
 
   " CXREF: <M-f>l → s:RecreateDubsVimMappings()
   "        <M-f>e → s:RecreateDubsVimMappings()
   "        <M-f>x → s:RecreateBuiltinMenuMappings_File()
-  " ~/.vim/pack/landonb/start/dubs_appearance/plugin/mimic_menu_keymap.vim
+  " ~/.kit/nvim/landonb/start/dubs_appearance/plugin/mimic_menu_keymap.vim
   nnoremap <Leader>dQ :wa<CR>:only<CR>:enew<CR>:BufOnly<CR>:qa<CR>
   inoremap <Leader>dQ <C-o>:wa<CR><C-O>:only<CR><C-O>:enew<CR><C-O>:BufOnly<CR><C-O>:qa<CR>
 endfunction

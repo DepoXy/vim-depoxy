@@ -63,7 +63,7 @@ endif
 " Use `gf` in insert and visual mode to run normal mode `gf`.
 "
 " CXREF:
-" ~/.vim/pack/embrace-vim/start/vim-goto-file-sh/after/plugin/async-mode-maps.vim
+" ~/.kit/nvim/embrace-vim/start/vim-goto-file-sh/after/plugin/async-mode-maps.vim
 
 function! s:CreateMaps_gf() abort
   let g:vim_goto_file_add_insert_mode_map = 1
@@ -73,7 +73,7 @@ function! s:CreateMaps_gf() abort
 
   " Tell WrapNav not to fiddle with 'j' or 'k'.
   " - CXREF:
-  "   ~/.vim/pack/landonb/start/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
+  "   ~/.kit/nvim/landonb/start/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
   let g:toggle_textwrap_disable_kj = 1
 
   silent! nunmap <silent> k
@@ -91,7 +91,7 @@ endfunction
 " Open files like `gf` but in adjacent window.
 "
 " CXREF:
-" ~/.vim/pack/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
+" ~/.kit/nvim/embrace-vim/start/vim-buffer-delights/autoload/embrace/windows.vim
 
 " MAYBE/2024-12-16: Add true `gF` support, and honor line number postfix.
 
@@ -135,7 +135,7 @@ endfunction
 
 " Also wire visual mode `gW`.
 " - CXREF:
-"   ~/.vim/pack/embrace-vim/start/vim-webopen/autoload/embrace/browser.vim @ 267
+"   ~/.kit/nvim/embrace-vim/start/vim-webopen/autoload/embrace/browser.vim @ 267
 function! s:CreateMap_VisualMode_gW() abort
   " [y]ank selected text to `"` register, then paste `"` contents as fcn. arg.
   vnoremap gW y:call g:embrace#browser#WebOpenUrl('<C-r>"', 0)<CR>

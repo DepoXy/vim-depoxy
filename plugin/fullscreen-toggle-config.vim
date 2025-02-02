@@ -25,7 +25,7 @@ let g:loaded_vim_depoxy_fullscreen_toggle_config = 1
 " -------------------------------------------------------------------
 
 " CXREF:
-" ~/.vim/pack/embrace-vim/start/vim-fullscreen-toggle/autoload/embrace/resize.vim
+" ~/.kit/nvim/embrace-vim/start/vim-fullscreen-toggle/autoload/embrace/resize.vim
 
 " Default: s:pixels_per_col = 7.014
 let g:fstoggle_pixels_per_col = 7.014
@@ -36,7 +36,7 @@ let g:fstoggle_on_init_min_lines = 68
 let g:fstoggle_on_init_min_columns = 272
 
 " CXREF:
-" ~/.vim/pack/embrace-vim/start/vim-fullscreen-toggle/autoload/embrace/fullscreen_toggle.vim
+" ~/.kit/nvim/embrace-vim/start/vim-fullscreen-toggle/autoload/embrace/fullscreen_toggle.vim
 
 call g:embrace#fullscreen_toggle#CreateMaps()
 
