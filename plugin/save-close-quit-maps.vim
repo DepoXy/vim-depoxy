@@ -39,6 +39,8 @@ function! s:CreateMaps()
   nnoremap <Leader>dC :Bdelete<CR>
   inoremap <Leader>dC <C-o>:Bdelete<CR>
 
+  " Save all buffers, close all buffers, and quit — so next instance
+  " starts with a fresh session.
   " CXREF: <M-f>l → s:RecreateDubsVimMappings()
   "        <M-f>e → s:RecreateDubsVimMappings()
   "        <M-f>x → s:RecreateBuiltinMenuMappings_File()
