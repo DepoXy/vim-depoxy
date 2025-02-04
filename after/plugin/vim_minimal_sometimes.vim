@@ -67,9 +67,11 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 "
 "   echom 'PID: ' .. system('ps -o command= -p $$')
 "
-" - The Vim process (the 'system()' parent process) is Vim, or MacVim:
+" - The Vim process (the 'system()' parent process) is Vim/MacVim/nvim --listen:
 "   - MacVim.app: /Applications/MacVim.app/Contents/MacOS/Vim
 "   - Terminal `vim`: /Applications/MacVim.app/Contents/MacOS/Vim
+"   - Neovim GUI:    /opt/homebrew/bin/nvim --embed -p --listen /tmp/nvim.socket...
+"   - Neovim script: /opt/homebrew/bin/nvim --embed -c startinsert -c norm! gg ...
 "   - Command `pass edit`: /Applications/MacVim.app/Contents/MacOS/Vim -c startinsert ...
 "   - Command 'dob edit': /Applications/MacVim.app/Contents/MacOS/Vim -c startinsert
 "       -c norm! gg /var/folders/4r/vs_plqd91h9dclfh5c020cdh0000gn/T/2024_11_18_1040_jc7tz6c9.rst
@@ -79,6 +81,8 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 " - Vim parent process ('system()' grand-parent) varies by context, e.g.:
 "   - MacVim parent: /sbin/launchd (aka PID 1)
 "   - Terminal `vim` parent: /opt/homebrew/bin/bash
+"   - Neovim GUI:    neovide -- --listen /tmp/nvim.socket...
+"   - Neovim script: /opt/homebrew/bin/nvim --embed -p --listen /tmp/nvim.socket...
 "   - `pass edit` and `dob edit` parent: bash /Users/user/.kit/sh/home-fries/bin/editor-vim-0-0-insert \
 "       /var/folders/4r/vs_plqd91h9dclfh5c020cdh0000gn/T//pass.fS3PYHKq1ZkXu/70KsFD-foo-bar.rst
 "   - ALTLY: `EDITOR= pass edit` and `EDITOR= dob edit` gp is not 'editor-vim-0-0-insert', but that
@@ -91,16 +95,17 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 " - Finally, the Vim grand-parent ('system()' g/g/p) tells us the app calling Vim, e.g.:
 "   - MacVim g/p: Nothing
 "   - `vim` g/p: /opt/homebrew/bin/bash
+"   - Neovim GUI:    /sbin/launchd [No GGGPID]
+"   - Neovim script: bash /Users/user/.kit/sh/home-fries/bin/editor-vim-0-0-insert ...
+"     - GGGPID: python (Dob)
 "   - `pass edit` g/p: bash /Users/user/.local/bin/pass edit --ext=rst zyx/foo
 "   - `dob edit` g/p: /Users/user/.kit/dob/dob/.venv-dob/bin/python \
 "       /Users/user/.kit/dob/dob/.venv-dob/bin/dob edit
 "
-"   echom 'GGPID: ' .. system('
-"     \ gpid="$(ps -o ppid= -p ${PPID} | tr -d " ")" ;
-"     \ ggpid="$(ps -o ppid= -p ${gpid} | tr -d " ")" ;
-"     \ ps -o command= -p ${ggpid}
-"     \ ')
-
+"  echom 'GGPID: ' .. system('gpid="$(ps -o ppid= -p ${PPID} | tr -d " ")" ;ggpid="$(ps -o ppid= -p ${gpid} | tr -d " ")" ;ps -o command= -p ${ggpid}')
+"
+"  echom 'GGGPID: ' .. system('gpid="$(ps -o ppid= -p ${PPID} | tr -d " ")" ;ggpid="$(ps -o ppid= -p ${gpid} | tr -d " ")" ;gggpid="$(ps -o ppid= -p ${ggpid} | tr -d " ")" ;ps -o command= -p ${gggpid}')
+"
 " - SAVVY: We'll check if called from `pass edit`, but it's unnecessary
 "   because `pass_safe` uses VIM_EDIT_JUICE_EXIT_ON_SAVE=1.
 "   - CXREF: ~/.depoxy/ambers/core/passstore.sh
@@ -111,8 +116,11 @@ function! s:MapCtrlSSaveAndExitForSpecialApps()
   call system('
     \ gpid="$(ps -o ppid= -p ${PPID} | tr -d " ")";
     \ ggpid="$(ps -o ppid= -p ${gpid} | tr -d " ")";
-    \ (ps -o command= -p ${gpid}; ps -o command= -p ${ggpid}) |
-    \   grep -q -e "^bash .*\/pass edit " -e "\/python .*\/dob edit$";
+    \ gggpid="$(ps -o ppid= -p ${ggpid} | tr -d " ")";
+    \ (ps -o command= -p ${gpid};
+    \  ps -o command= -p ${ggpid};
+    \  ps -o command= -p ${gggpid};
+    \ ) | grep -q -e "^bash .*\/pass edit " -e "\/python .*\/dob edit$";
     \ ')
 
   if !v:shell_error
