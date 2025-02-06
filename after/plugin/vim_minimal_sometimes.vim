@@ -110,7 +110,7 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 "   because `pass_safe` uses VIM_EDIT_JUICE_EXIT_ON_SAVE=1.
 "   - CXREF: ~/.depoxy/ambers/core/passstore.sh
 
-function! s:MapCtrlSSaveAndExitForSpecialApps()
+function! MapCtrlSSaveAndExitForSpecialApps() abort
   " Check if `dob edit` or `pass edit` is great-grand-parent process,
   " or if EDITOR="" and one of said commands is grand-parent process.
   call system('
@@ -131,5 +131,15 @@ function! s:MapCtrlSSaveAndExitForSpecialApps()
   endif
 endfunction
 
-call s:MapCtrlSSaveAndExitForSpecialApps()
+" RACEC/2025-02-05: There's a race condition here with another <Ctrl-S> mapper:
+"   ~/.kit/nvim/landonb/start/dubs_edit_juice/after/plugin/ctrl-s-save-command.vim
+" One option is just a little delay (I sorta assume Vim won't run a timer until
+" after finishing loading, but I could be wrong! Nonetheless, this seems to work):
+"   call timer_start(0, { -> execute('call MapCtrlSSaveAndExitForSpecialApps()', '')})
+" Another option is to just hook VimEnter and be more certain this'll run after after/.
+
+augroup vim-depoxy--vim-minimal-sometimes
+  autocmd!
+  autocmd VimEnter * :call MapCtrlSSaveAndExitForSpecialApps()
+augroup End
 
