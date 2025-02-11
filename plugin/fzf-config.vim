@@ -41,6 +41,10 @@ let g:loaded_vim_depoxy_fzf_config = 1
 " CXREF: See more FZF ref. in the complementary shell file:
 "
 "   ~/.depoxy/ambers/core/fzf-setup.sh
+"
+" REFER:
+"
+"   https://github.com/junegunn/fzf.vim
 
 " ***
 
