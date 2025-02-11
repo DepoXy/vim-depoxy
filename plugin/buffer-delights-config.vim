@@ -48,3 +48,17 @@ endfunction
 
 call s:CreateMaps__CloseVimHelpWindow('<Leader>dG')
 
+" -------------------------------------------------------------------
+
+" Open Scratch window with \dN (and enter Insert mode)
+" ----------------------------
+nnoremap <silent> <Leader>dN :call g:embrace#scratch#CreateScratchWindow()<CR>i
+inoremap <silent> <Leader>dN <C-o>:call g:embrace#scratch#CreateScratchWindow()<CR>
+
+" -------------------------------------------------------------------
+
+" Resize windows with \dW
+" -----------------------
+nnoremap <silent> <Leader>dV :call g:embrace#vresize#VerticalResizeNormalBufferWindowsEqually()<CR>
+inoremap <silent> <Leader>dV <C-o>:call g:embrace#vresize#VerticalResizeNormalBufferWindowsEqually()<CR>
+
