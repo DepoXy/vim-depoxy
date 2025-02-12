@@ -37,6 +37,7 @@ endif
 " CXREF:
 " ~/.kit/nvim/embrace-vim/start/vim-command-line-clock/autoload/embrace/command_line_clock.vim
 call g:embrace#mescaline#Setup({
+  \ 'mescaline_disable': 0,
   \ 'clock_enable': 1,
   \ 'clock_rate': 2500,
   \ 'git_icon': '',
