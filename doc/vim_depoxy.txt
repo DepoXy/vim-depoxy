@@ -1,6 +1,6 @@
 *vim_depoxy.txt*	For Vim version 7.4.	Last change: 2022 Dec 12
 
-VIM DEPOXY 🤙 Opinionated Vim plugin for DepoXy~
+VIM DEPOXY 🤙 Opinionated Vim plugin for DepoXy ~
 
 VIM DEPOXY				*vim-depoxy*
 
