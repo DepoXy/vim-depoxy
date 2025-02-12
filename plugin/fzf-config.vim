@@ -213,7 +213,7 @@ function! s:WireFzfGitRootSearch()
   "  two things together and presto.
   " - Set the working directory to the Git root of the current file,
   "   then open FZF fuzzy find window.
-  map <silent> <leader>ff :Glcd<CR>:FZF<CR>
+  nnoremap <silent> <leader>ff :Glcd<CR>:FZF<CR>
 endfunction
 
 " ***
