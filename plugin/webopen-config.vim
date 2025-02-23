@@ -36,6 +36,7 @@ if 0
   let g:vim_webopen_google_search_seq = "<Leader>W"
   " let g:vim_webopen_open_incognito_seq = "g!"
   let g:vim_webopen_open_incognito_seq = "<Leader>P"
+  let g:vim_webopen_open_url_github_seq = "<Leader>og"
 endif
 
 " Option 2: Define single global variable mapping.
@@ -78,6 +79,7 @@ if 1
     \   "define": "<Leader>D",
     \   "search": "<Leader>W",
     \   "incognito": { "nmap": "g!" },
+    \   "github": "<Leader>og",
     \ }
 endif
 
@@ -103,6 +105,10 @@ if 0
   let g:vim_webopen_maps.search.vmap = "<Leader>W"
 
   let g:vim_webopen_maps.incognito.nmap = "g!"
+
+  let g:vim_webopen_maps.github.nmap = "<Leader>og"
+  let g:vim_webopen_maps.github.imap = "<Leader>og"
+  let g:vim_webopen_maps.github.vmap = "<Leader>og"
 endif
 
 " If you'd like each URL to open in a new browser tab in an
