@@ -67,6 +67,8 @@ endif
 "     especially because <Leader>T is wired in multiple modes modes.
 "   - 2020-09-01: (lb): Unbound/Available: gS, gW, g!. Taken: gP, g@, g#...
 
+" FIXME/2025-02-23 11:21: Add key descriptions for which-key.
+
 if 1
   let g:vim_webopen_maps =
     \ {
