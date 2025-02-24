@@ -37,7 +37,7 @@ let g:loaded_vim_depoxy_vim_minimal_sometimes = 1
 "
 " - CXREF: You'll find the easier solution wired in dubs_edit_juice:
 "
-"   ~/.kit/nvim/landonb/start/dubs_edit_juice/after/plugin/dubs_after_juice.vim
+"   ~/.kit/nvim/landonb/dubs_edit_juice/after/plugin/dubs_after_juice.vim
 "
 " - MAYBE/2024-08-07: We could remove this plugin if we devise an
 "   environ approach for `dob edit`.
@@ -132,7 +132,7 @@ function! MapCtrlSSaveAndExitForSpecialApps() abort
 endfunction
 
 " RACEC/2025-02-05: There's a race condition here with another <Ctrl-S> mapper:
-"   ~/.kit/nvim/landonb/start/dubs_edit_juice/after/plugin/ctrl-s-save-command.vim
+"   ~/.kit/nvim/landonb/dubs_edit_juice/after/plugin/ctrl-s-save-command.vim
 " One option is just a little delay (I sorta assume Vim won't run a timer until
 " after finishing loading, but I could be wrong! Nonetheless, this seems to work):
 "   call timer_start(0, { -> execute('call MapCtrlSSaveAndExitForSpecialApps()', '')})

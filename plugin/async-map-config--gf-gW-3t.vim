@@ -73,7 +73,7 @@ function! s:CreateMaps_gf() abort
 
   " Tell WrapNav not to fiddle with 'j' or 'k'.
   " - CXREF:
-  "   ~/.kit/nvim/landonb/start/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
+  "   ~/.kit/nvim/landonb/dubs_toggle_textwrap/autoload/toggle_textwrap/wrapnav.vim
   let g:toggle_textwrap_disable_kj = 1
 
   silent! nunmap <silent> k

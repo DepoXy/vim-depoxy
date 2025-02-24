@@ -13,6 +13,6 @@
 " - CXREF: function cdd ():
 "   ~/.kit/sh/home-fries/lib/alias/alias_cd_pushd_popd.sh
 " - CXREF: SlashPathNoSpell highlight group:
-"   ~/.kit/nvim/landonb/start/vim-reST-highdefs/after/syntax/rst.vim
+"   ~/.kit/nvim/landonb/vim-reST-highdefs/after/syntax/rst.vim
 syn keyword SlashPathNoSpell cdd
 

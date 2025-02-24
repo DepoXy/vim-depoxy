@@ -46,7 +46,7 @@ if has('nvim')
 endif
 
 " CXREF:
-" ~/.kit/nvim/landonb/start/vim-title-bar-time-of-day/autoload/embrace/titlebar.vim
+" ~/.kit/nvim/landonb/vim-title-bar-time-of-day/autoload/embrace/titlebar.vim
 call g:embrace#titlebar#Setup({
   \ 'titlebar_disable': 0,
   \ 'clock_rate': 2500,

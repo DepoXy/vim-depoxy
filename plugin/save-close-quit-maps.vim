@@ -44,7 +44,7 @@ function! s:CreateMaps()
   " CXREF: <M-f>l → s:RecreateDubsVimMappings()
   "        <M-f>e → s:RecreateDubsVimMappings()
   "        <M-f>x → s:RecreateBuiltinMenuMappings_File()
-  " ~/.kit/nvim/landonb/start/dubs_appearance/plugin/mimic_menu_keymap.vim
+  " ~/.kit/nvim/landonb/dubs_appearance/plugin/mimic_menu_keymap.vim
   nnoremap <Leader>dQ :wa<CR>:only<CR>:enew<CR>:BufOnly<CR>:qa<CR>
   inoremap <Leader>dQ <C-o>:wa<CR><C-O>:only<CR><C-O>:enew<CR><C-O>:BufOnly<CR><C-O>:qa<CR>
 endfunction
