@@ -33,17 +33,18 @@ let g:loaded_vim_depoxy_shift_ctrl_binding_magic = 1
 "   inoremap <S-C-D> <C-O>:call CursorFriendlyIndent(1)<CR>
 "   inoremap <S-M-D> <C-O>:call CursorFriendlyIndent(1)<CR>
 " CXREF: ~/.depoxy/ambers/home/.config/alacritty/alacritty.toml
+" <Shift-Ctrl-D>
 "   { key = "D", mods = "Control|Shift", chars = "\uE003" },
 inoremap  <C-O>:call CursorFriendlyIndent(1)<CR>
 
 " CXREF: ~/.kit/nvim/landonb/dubs_edit_juice/plugin/ctrl-backspace.vim
 "   inoremap <c-s-w> <C-O>:<C-U>call <SID>delete_back_line()<CR>
+"   inoremap <m-s-w> <C-O>:<C-U>call <SID>delete_back_line()<CR>
 "   if has('macunix')
 "     inoremap „ <C-O>:<C-U>call <SID>delete_back_line()<CR>
-"   else
-"     inoremap <m-s-w> <C-O>:<C-U>call <SID>delete_back_line()<CR>
 "   endif
 " CXREF: ~/.depoxy/ambers/home/.config/alacritty/alacritty.toml
+" <Shift-Ctrl-W>
 "   { key = "W", mods = "Control|Shift", chars = "\uE016" },
 inoremap  <C-O>:<C-U>call dubs_edit_juice_backspace#delete_back_line()<CR>
 
