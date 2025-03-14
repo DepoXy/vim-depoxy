@@ -43,7 +43,7 @@ let g:restfold_min_title_width = 93
 let g:restfold_weldable_max_lead_spaces = 3
 
 " 2021-03-11: Disable Unicode design fold test, so that my old-style headers, e.g.,
-"     ┃ YYYY-MM-DD: FIXME: Foo ┃
+"     ┃ YYYY-MM-DD: FIVER: Foo ┃
 " are pipe-prefixed like other open tasks.
 " - So now if you don't want such titles pipe-prefixed,
 "   just ensure they have 2 or fewer lines of content,
