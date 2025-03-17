@@ -201,7 +201,12 @@ endfunction
 
 " \F — Search files under user home.
 function! s:WireFzfAllFilesSearch()
-  nnoremap <silent> <LocalLeader>F :lcd<CR>:FZF<CR>
+  if !has('nvim')
+    nnoremap <silent> <LocalLeader>F :lcd<CR>:FZF<CR>
+  else
+    lua vim.keymap.set("n", "<LocalLeader>F", ":lcd<CR>:FZF<CR>",
+      \ { desc = "FZF User Home", noremap = true, silent = true})
+  endif
 endfunction
 
 " ***
@@ -218,8 +223,15 @@ function! s:WireFzfGitRootSearch()
   "  two things together and presto.
   " - Set the working directory to the Git root of the current file,
   "   then open FZF fuzzy find window.
-  nnoremap <silent> <LocalLeader>ff :Glcd<CR>:FZF<CR>
-  inoremap <silent> <LocalLeader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
+  if !has('nvim')
+    nnoremap <silent> <LocalLeader>ff :Glcd<CR>:FZF<CR>
+    inoremap <silent> <LocalLeader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
+  else
+    lua vim.keymap.set({ "n", "i"}, "<LocalLeader>ff", function()
+      \   vim.cmd("Glcd")
+      \   vim.cmd("FZF")
+      \ end, { desc = "FZF Project Dir.", noremap = true, silent = true})
+  endif
 endfunction
 
 " ***
