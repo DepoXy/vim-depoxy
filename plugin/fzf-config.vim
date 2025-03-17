@@ -201,7 +201,7 @@ endfunction
 
 " \F — Search files under user home.
 function! s:WireFzfAllFilesSearch()
-  map <silent> <leader>F :lcd<CR>:FZF<CR>
+  nnoremap <silent> <LocalLeader>F :lcd<CR>:FZF<CR>
 endfunction
 
 " ***
@@ -218,8 +218,8 @@ function! s:WireFzfGitRootSearch()
   "  two things together and presto.
   " - Set the working directory to the Git root of the current file,
   "   then open FZF fuzzy find window.
-  nnoremap <silent> <leader>ff :Glcd<CR>:FZF<CR>
-  inoremap <silent> <leader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
+  nnoremap <silent> <LocalLeader>ff :Glcd<CR>:FZF<CR>
+  inoremap <silent> <LocalLeader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
 endfunction
 
 " ***
