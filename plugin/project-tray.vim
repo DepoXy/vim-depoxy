@@ -24,8 +24,9 @@ let g:loaded_dubs_project_tray_config = 1
 
 " -------------------------------------------------------------------
 
-" Resize windows with \dW
+" Resize windows with \dV
 " -----------------------
+" REFER: You probably don't need this if you enable &equalalways.
 nnoremap <silent> <Leader>dV :call g:embrace#vresize#VerticalResizeNormalBufferWindowsEqually()<CR>
 inoremap <silent> <Leader>dV <C-o>:call g:embrace#vresize#VerticalResizeNormalBufferWindowsEqually()<CR>
 

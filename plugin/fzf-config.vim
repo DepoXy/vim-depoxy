@@ -178,6 +178,11 @@ function! s:WireFzfFilesWithMatches()
   "     :F \\<Glcd\\>
   " - This is a LOPRI request because grep-steady supports those searches.
 
+  " DPNDS: The :FF command and \ff map depend on :Glcd from vim-fugitive.
+  " - INERT: Replace dependency with system() call:
+  "     let l:projdir = system('cd "' .. expand("%:p:h") .. '" && git rev-parse --show-toplevel')
+  "     lcd l:projdir
+  
   " CXREF: This commands call junegunn/fzf.vim:
   " ~/.kit/nvim/junegunn/start/fzf.vim/autoload/fzf/vim.vim
 

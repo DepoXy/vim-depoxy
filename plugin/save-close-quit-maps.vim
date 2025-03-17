@@ -23,24 +23,17 @@ let g:loaded_vim_depoxy_vim_save_close_quit_maps = 1
 " -------------------------------------------------------------------
 
 function! s:CreateMaps()
-  " LATER/2024-12-13: But will you use this instead of <M-f>c?
-  "
-  " THOTS/2024-12-21: I don't actually close files that often!
-  " - Especially not some of my 10k line reST files that take
-  "   a while to repoen (at least on my underpowered Mac Mini).
-  "     nnoremap <Leader>dc :Bdelete<CR>
-  "     inoremap <Leader>dc <C-o>:Bdelete<CR>
-  " - So let's try something a little more cumbersome (but still
-  "   easier than <Alt-f>c).
-  "   - Which makes me wonder if \dq save-all-quit should be \dQ...
+  " HSTRY/2024-12-21: Was <LocalLeader>dc, but made a little
+  " more cumbersome to signal it's a little-more "destructive".
+  " - And now I wonder if \dq save-all-quit should be \dQ...
   "
   " CXREF:
   " ~/.kit/nvim/vim-scripts/start/bbye/plugin/bbye.vim
   nnoremap <Leader>dC :Bdelete<CR>
   inoremap <Leader>dC <C-o>:Bdelete<CR>
 
-  " Save all buffers, close all buffers, and quit — so next instance
-  " starts with a fresh session.
+  " Save all buffers, close all buffers, and quit — so next
+  " instance starts with a fresh session.
   " CXREF: <M-f>l → s:RecreateDubsVimMappings()
   "        <M-f>e → s:RecreateDubsVimMappings()
   "        <M-f>x → s:RecreateBuiltinMenuMappings_File()

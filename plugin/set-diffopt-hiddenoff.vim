@@ -48,7 +48,7 @@ let g:loaded_vim_depoxy_set_diffopt_hiddenoff = 1
 "   2 Open the file you want to diff.
 "       :e ...
 "   3 Start the diff, passing the {commit} reference to diff against:
-"       :Gdiffsplit {commit}:%
+"       :Gvdiffsplit {commit}:%
 "   4 I like to diff right to left, but Vimdiff opens the newer file
 "     on the right, so I prefer to swap the two windows:
 "       Ctrl-w x (swap windows)
@@ -96,12 +96,18 @@ let g:loaded_vim_depoxy_set_diffopt_hiddenoff = 1
 
 " Default options:
 "
+"   " Neovim
+"   set diffopt=internal,filler,closeoff,linematch:40
+"   " Vim
 "   set diffopt=internal,filler,closeoff
 "
 " 2021-02-16: I like the hiddenoff option for stopping the diff. I use two
 " windows side-by-side normally while developing, so closeoff is not not
 " as useful to me -- I'd rather use run `:diffoff`. But hiddenoff makes it
 " even easier -- just close either file under diff, and it's all over!
+" - 2025-03-16: Seems to work fine in Neovim without this setting: load
+"   another buffer in one of the diff windows, and both stop diffing. (I
+"   also never diff in (Neo)vim, so this is not a feature that concerns me.)
 set diffopt+=hiddenoff
 
 " ########################################################################
