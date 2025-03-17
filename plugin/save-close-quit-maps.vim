@@ -29,8 +29,10 @@ function! s:CreateMaps()
   "
   " CXREF:
   " ~/.kit/nvim/vim-scripts/start/bbye/plugin/bbye.vim
-  nnoremap <Leader>dC :Bdelete<CR>
-  inoremap <Leader>dC <C-o>:Bdelete<CR>
+  " 
+  " CALSO: <LocalLeader>dC | <Alt-f>c — the same.
+  nnoremap <Leader>dC <cmd>Bdelete<CR>
+  inoremap <Leader>dC <cmd>Bdelete<CR>
 
   " Save all buffers, close all buffers, and quit — so next
   " instance starts with a fresh session.
