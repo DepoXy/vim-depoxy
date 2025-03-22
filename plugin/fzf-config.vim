@@ -210,18 +210,27 @@ endfunction
 
 " \F — Search files under user home.
 function! s:WireFzfAllFilesSearch()
-  if !has('nvim')
-    nnoremap <silent> <LocalLeader>F :lcd<CR>:FZF<CR>
-  else
-    lua vim.keymap.set("n", "<LocalLeader>F", ":lcd<CR>:FZF<CR>",
-      \ { desc = "FZF User Home", noremap = true, silent = true})
+  if has('nvim')
+    " CXREF: See Neovim config for vim.keymap.set() calls:
+    " ~/.kit/nvim/landonb/nvim-lazyb/lua/plugins/snacks-fzf-pickers.lua
+
+    return
   endif
+
+  nnoremap <silent> <LocalLeader>F :lcd<CR>:FZF<CR>
 endfunction
 
 " ***
 
 " \f — Search files under Git root of current file's project.
 function! s:WireFzfGitRootSearch()
+  if has('nvim')
+    " CXREF: See Neovim config for vim.keymap.set() calls:
+    " ~/.kit/nvim/landonb/nvim-lazyb/lua/plugins/snacks-fzf-pickers.lua
+
+    return
+  endif
+
   " Use Tim Pope's fugitive to set the working directory to the Git root
   " of the current file, then opens the FZF file fuzzy finder window.
   " (Vim doesn't cd as you open files and change buffers, so up to us.
@@ -232,15 +241,8 @@ function! s:WireFzfGitRootSearch()
   "  two things together and presto.
   " - Set the working directory to the Git root of the current file,
   "   then open FZF fuzzy find window.
-  if !has('nvim')
-    nnoremap <silent> <LocalLeader>ff :Glcd<CR>:FZF<CR>
-    inoremap <silent> <LocalLeader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
-  else
-    lua vim.keymap.set({ "n", "i"}, "<LocalLeader>ff", function()
-      \   vim.cmd("Glcd")
-      \   vim.cmd("FZF")
-      \ end, { desc = "FZF Project Dir.", noremap = true, silent = true})
-  endif
+  nnoremap <silent> <LocalLeader>ff :Glcd<CR>:FZF<CR>
+  inoremap <silent> <LocalLeader>ff <C-o>:Glcd<CR><C-o>:FZF<CR>
 endfunction
 
 " ***
