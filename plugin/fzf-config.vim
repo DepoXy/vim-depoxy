@@ -95,7 +95,7 @@ function! s:SetFzfEnvirons()
   " USYNC: See comment above: Copy this string from your shell.
   " - Also update the rg_command, below.
 
-  let $FZF_DEFAULT_COMMAND="rg --files --hidden --follow --no-ignore-vcs --no-ignore-parent -g '!**/{.git,.tox,node_modules,.crypt}/**' -g '!**/{*.swp,.bash_history,*.bin,*.gif,*.gpg,*.jpg,*.Jpg,*.JPG,*.nib,*.odg,*.odt,*.pdf,*.Pdf,*.PDF,*.png,*.pyc,*.svg,.viminfo,*.xpm,*.zip}'"
+  let $FZF_DEFAULT_COMMAND="rg --files --hidden --follow --no-ignore-vcs --no-ignore-parent -g '!**/{.git,.tox,node_modules,.crypt}/**' -g '!**/{*.swp,.bash_history,*.bin,*.gif,*.gpg,*.jpg,*.Jpg,*.JPG,*.nib,*.odg,*.odt,*.pdf,*.Pdf,*.PDF,*.png,*.pyc,*.svg,.viminfo,*.xpm,*.zip,doc/tags}'"
 
   let $FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
 endfunction
@@ -137,7 +137,7 @@ function! s:WireFzfFilesWithMatches()
     \   --ignore-case
     \   --color "always"
     \   -g "!**/{.git,.tox,node_modules,.crypt}/**"
-    \   -g "!**/{*.swp,.bash_history,*.bin,*.gif,*.gpg,*.jpg,*.Jpg,*.JPG,*.nib,*.odg,*.odt,*.pdf,*.Pdf,*.PDF,*.png,*.pyc,*.svg,.viminfo,*.xpm,*.zip}"
+    \   -g "!**/{*.swp,.bash_history,*.bin,*.gif,*.gpg,*.jpg,*.Jpg,*.JPG,*.nib,*.odg,*.odt,*.pdf,*.Pdf,*.PDF,*.png,*.pyc,*.svg,.viminfo,*.xpm,*.zip,doc/tags}"
     \ '
 
   " The `:F {term}` command is pretty nifty, it'll search in files for
