@@ -36,7 +36,7 @@ function! git_fugitive_window_cleanup#close_git_windows() abort
     let l:bufnr = winbufnr(l:curr_winnr)
 
     if s:IsVimFugitiveWindow(l:bufnr)
-      if l:curr_winnr < l:orig_winnr
+      if l:curr_winnr <= l:orig_winnr
         let l:adjust_nr += 1
       endif
     endif
