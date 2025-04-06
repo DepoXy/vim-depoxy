@@ -6,10 +6,19 @@
 
 " -------------------------------------------------------------------
 
-if exists("g:autoloaded_vim_depoxy_git_fugitive_window_cleanup")
+" GUARD: Press <F9> to reload this plugin (or :source it).
+" - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
+
+if expand('%:p') ==# expand('<sfile>:p')
+  unlet! g:loaded_vim_depoxy_git_fugitive_window_cleanup
+endif
+
+if exists('g:loaded_vim_depoxy_git_fugitive_window_cleanup') || &cp
+
   finish
 endif
-let g:autoloaded_vim_depoxy_git_fugitive_window_cleanup = 1
+
+let g:loaded_vim_depoxy_git_fugitive_window_cleanup = 1
 
 " -------------------------------------------------------------------
 
