@@ -31,12 +31,13 @@ let g:loaded_vim_depoxy_webopen_config = 1
 " - Set to the empty string to inhibit the maps for the specified feature.
 if 0
   " Similar to g:vim_webopen_maps, below, but without bonus 'gW' map.
-  let g:vim_webopen_open_url_seq = "<Leader>T"
+  let g:vim_webopen_open_url_seq = "<Leader>U"
   let g:vim_webopen_google_define_seq = "<Leader>D"
   let g:vim_webopen_google_search_seq = "<Leader>W"
   " let g:vim_webopen_open_incognito_seq = "g!"
   let g:vim_webopen_open_incognito_seq = "<Leader>P"
   let g:vim_webopen_open_url_github_seq = "<Leader>og"
+  let g:vim_webopen_thesaurus_search_seq = "<Leader>T"
 endif
 
 " Option 2: Define single global variable mapping.
@@ -74,14 +75,15 @@ if 1
     \ {
     \   "open":
     \     {
-    \       "nmap": [ "<Leader>T", "gW" ],
-    \       "imap": "<Leader>T",
-    \       "vmap": "<Leader>T",
+    \       "nmap": [ "<Leader>U", "gW" ],
+    \       "imap": "<Leader>U",
+    \       "vmap": "<Leader>U",
     \     },
     \   "define": "<Leader>D",
     \   "search": "<Leader>W",
     \   "incognito": { "nmap": "g!" },
     \   "github": "<Leader>og",
+    \   "thesaurus": "<Leader>T",
     \ }
 endif
 
@@ -94,9 +96,9 @@ if 0
   let g:vim_webopen_maps.search = {}
   let g:vim_webopen_maps.incognito = {}
 
-  let g:vim_webopen_maps.open.nmap = [ "<Leader>T", "gW" ]
-  let g:vim_webopen_maps.open.imap = "<Leader>T"
-  let g:vim_webopen_maps.open.vmap = "<Leader>T"
+  let g:vim_webopen_maps.open.nmap = [ "<Leader>U", "gW" ]
+  let g:vim_webopen_maps.open.imap = "<Leader>U"
+  let g:vim_webopen_maps.open.vmap = "<Leader>U"
 
   let g:vim_webopen_maps.define.nmap = "<Leader>D"
   let g:vim_webopen_maps.define.imap = "<Leader>D"
@@ -111,6 +113,10 @@ if 0
   let g:vim_webopen_maps.github.nmap = "<Leader>og"
   let g:vim_webopen_maps.github.imap = "<Leader>og"
   let g:vim_webopen_maps.github.vmap = "<Leader>og"
+
+  let g:vim_webopen_maps.thesaurus.nmap = "<Leader>T"
+  let g:vim_webopen_maps.thesaurus.imap = "<Leader>T"
+  let g:vim_webopen_maps.thesaurus.vmap = "<Leader>T"
 endif
 
 " If you'd like each URL to open in a new browser tab in an
