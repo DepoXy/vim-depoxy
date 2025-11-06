@@ -8,6 +8,17 @@
 
 " -------------------------------------------------------------------
 
+" ISOFF/2025-11-05: Now configured from nvim-depoxy Neovim Lua config.
+" - CXREF: Found in a DepoXy env. at:
+"   ~/.kit/nvim/nvim-depoxy/.config/nvim/lua/specs/group--most-entirely.lua
+" - DUNNO/2025-11-05: These maps work from `gvim` but not from terminal `vim`.
+"   - But I don't support Vim anymore, meh.
+if has('nvim')
+  finish
+endif
+
+" -------------------------------------------------------------------
+
 " GUARD: Press <F9> to reload this plugin (or :source it).
 " - Via: https://github.com/embrace-vim/vim-source-reloader#↩️
 
